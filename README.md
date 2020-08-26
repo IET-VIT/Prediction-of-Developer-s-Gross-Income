@@ -2,6 +2,7 @@
 # Objective
 Building a web portal which predicts salary and creating data analysis. 
 Extract data from https://insights.stackoverflow.com/survey
+- [x] Issues Created and milestone added
 # Creating Pipeline
 **TO DO** :
 - [ ] Web Dev Part
