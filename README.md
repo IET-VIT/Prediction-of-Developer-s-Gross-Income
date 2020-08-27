@@ -5,11 +5,11 @@ Extract data from https://insights.stackoverflow.com/survey
 
 # Everyday Progress :
 - [x] 26 Aug 2020
-  - [x] ✔ 1. Issues Created and milestone added
+  - ✔ 1. Issues Created and milestone added
 - [x] 27 Aug 2020
-  - [x] ✔ 2. Data Analysis Done
-  - [x] ✔ 3. Converted categorical parameters into int/float 
-  - [x] ✔ 4. Identified problematic features, which has to be dealt distinctly
+  - ✔ 2. Data Analysis Done
+  - ✔ 3. Converted categorical parameters into int/float 
+  - ✔ 4. Identified problematic features, which has to be dealt distinctly
 # Creating Pipeline
 **TO DO** :
 - [ ] Web Dev Part
