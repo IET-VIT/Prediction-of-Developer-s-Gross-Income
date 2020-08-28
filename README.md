@@ -10,6 +10,10 @@ Extract data from https://insights.stackoverflow.com/survey
   - ✔ 2. Data Analysis Done
   - ✔ 3. Converted categorical parameters into int/float 
   - ✔ 4. Identified problematic features, which has to be dealt distinctly
+ - [x] 28 Aug 2020
+  - ✔ 5. Figuring out combinational features which needs to be treated as multi-class categories
+  - ✔ 6. Discussed inputs format for the API
+  - ✔ 7. Discussing different methods for the above
 # Creating Pipeline
 **TO DO** :
 - [ ] Web Dev Part
