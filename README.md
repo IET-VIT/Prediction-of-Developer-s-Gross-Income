@@ -14,6 +14,11 @@ Extract data from https://insights.stackoverflow.com/survey
   - ✔ 5. Figuring out combinational features which needs to be treated as multi-class categories
   - ✔ 6. Discussed inputs format for the API
   - ✔ 7. Discussing different methods for creating uniform data
+- [x] 29 Aug 2020
+  - ✔ 8. Data Cleaning 
+  - ✔ 9. Treated YearCode data and removed some more features
+  - ✔ 10. Compensation data cleaned
+  - ✔ 11. Method of treating multi-class data decided
 # Creating Pipeline
 **TO DO** :
 - [ ] Web Dev Part
