@@ -25,6 +25,8 @@ Extract data from https://insights.stackoverflow.com/survey
   - ✔ 14. Normalized data
   - ✔ 15. Checked Correlation 
   - ✔ 16. Improvement needed
+- [x] 31 Aug 2020
+  - ✔ 17. Working on correlation 
   
 # Creating Pipeline
 **TO DO** :
