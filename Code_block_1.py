@@ -88,3 +88,182 @@ def Convert_YearsCodePro_and_YearsCode ( df ):
     return df
 
 Convert_YearsCodePro_and_YearsCode(df)
+
+''' Multiclass Categorical feature'''
+DevType = pd.DataFrame(rep_devtype)
+
+df["DevType"] = DevType
+
+LanguageWorkedWith = df["LanguageWorkedWith"]
+LanguageWorkedWith.fillna(value= '-1', inplace = True )
+ls = []
+for i in LanguageWorkedWith  :    
+    if i != '-1':
+        cat = i.split(';')
+        for j in cat:
+            if j not in ls:
+                ls.append(j)
+d = dict(zip(set(ls), range(len(ls))))
+rep_LanguageWorkedWith   = []
+for i in LanguageWorkedWith  :
+    if i == '-1':
+        rep_LanguageWorkedWith.append(-1)
+    if i != '-1':
+        sum = 0
+        cat = i.split(';')
+        for j in cat:
+            sum = d[ j ] + sum
+        rep_LanguageWorkedWith.append(sum) 
+LanguageWorkedWith = pd.DataFrame(rep_LanguageWorkedWith)
+
+df["LanguageWorkedWith"] = LanguageWorkedWith
+
+DatabaseWorkedWith = df["DatabaseWorkedWith"]
+DatabaseWorkedWith.fillna(value= '-1', inplace = True )
+ls = []
+for i in DatabaseWorkedWith  :    
+    if i != '-1':
+        cat = i.split(';')
+        for j in cat:
+            if j not in ls:
+                ls.append(j)
+d = dict(zip(set(ls), range(len(ls))))
+rep_DatabaseWorkedWith   = []
+for i in DatabaseWorkedWith  :
+    if i == '-1':
+        rep_DatabaseWorkedWith.append(-1)
+    if i != '-1':
+        sum = 0
+        cat = i.split(';')
+        for j in cat:
+            sum = d[ j ] + sum
+        rep_DatabaseWorkedWith.append(sum) 
+DatabaseWorkedWith = pd.DataFrame(rep_DatabaseWorkedWith)
+
+df["DatabaseWorkedWith"] = DatabaseWorkedWith
+
+PlatformWorkedWith = df["PlatformWorkedWith"]
+PlatformWorkedWith.fillna(value= '-1', inplace = True )
+ls = []
+for i in PlatformWorkedWith  :    
+    if i != '-1':
+        cat = i.split(';')
+        for j in cat:
+            if j not in ls:
+                ls.append(j)
+d = dict(zip(set(ls), range(len(ls))))
+rep_PlatformWorkedWith   = []
+for i in PlatformWorkedWith  :
+    if i == '-1':
+        rep_PlatformWorkedWith.append(-1)
+    if i != '-1':
+        sum = 0
+        cat = i.split(';')
+        for j in cat:
+            sum = d[ j ] + sum
+        rep_PlatformWorkedWith.append(sum) 
+PlatformWorkedWith = pd.DataFrame(rep_PlatformWorkedWith)
+
+df["PlatformWorkedWith"] = PlatformWorkedWith
+
+WebFrameWorkedWith = df["WebFrameWorkedWith"]
+WebFrameWorkedWith.fillna(value= '-1', inplace = True )
+ls = []
+for i in WebFrameWorkedWith  :    
+    if i != '-1':
+        cat = i.split(';')
+        for j in cat:
+            if j not in ls:
+                ls.append(j)
+d = dict(zip(set(ls), range(len(ls))))
+rep_WebFrameWorkedWith   = []
+for i in WebFrameWorkedWith  :
+    if i == '-1':
+        rep_WebFrameWorkedWith.append(-1)
+    if i != '-1':
+        sum = 0
+        cat = i.split(';')
+        for j in cat:
+            sum = d[ j ] + sum
+        rep_WebFrameWorkedWith.append(sum) 
+WebFrameWorkedWith = pd.DataFrame(rep_WebFrameWorkedWith)
+
+df["WebFrameWorkedWith"] = DatabaseWorkedWith
+
+MiscTechWorkedWith = df["MiscTechWorkedWith"]
+MiscTechWorkedWith.fillna(value= '-1', inplace = True )
+ls = []
+for i in MiscTechWorkedWith  :    
+    if i != '-1':
+        cat = i.split(';')
+        for j in cat:
+            if j not in ls:
+                ls.append(j)
+d = dict(zip(set(ls), range(len(ls))))
+rep_MiscTechWorkedWith   = []
+for i in MiscTechWorkedWith  :
+    if i == '-1':
+        rep_MiscTechWorkedWith.append(-1)
+    if i != '-1':
+        sum = 0
+        cat = i.split(';')
+        for j in cat:
+            sum = d[ j ] + sum
+        rep_MiscTechWorkedWith.append(sum) 
+MiscTechWorkedWith = pd.DataFrame(rep_MiscTechWorkedWith)
+
+df["MiscTechWorkedWith"] = MiscTechWorkedWith
+
+Containers = df["Containers"]
+Containers.fillna(value= '-1', inplace = True )
+ls = []
+for i in Containers  :    
+    if i != '-1':
+        cat = i.split(';')
+        for j in cat:
+            if j not in ls:
+                ls.append(j)
+d = dict(zip(set(ls), range(len(ls))))
+rep_Containers   = []
+for i in Containers  :
+    if i == '-1':
+        rep_Containers.append(-1)
+    if i != '-1':
+        sum = 0
+        cat = i.split(';')
+        for j in cat:
+            sum = d[ j ] + sum
+        rep_Containers.append(sum) 
+Containers = pd.DataFrame(rep_Containers)
+    
+
+df["Containers"] = Containers  
+
+''' Imputting data'''
+
+df['WorkWeekHrs'] = df['WorkWeekHrs'].fillna((df['WorkWeekHrs'].mean()))
+df['CodeRevHrs'] = df['CodeRevHrs'].fillna((df['CodeRevHrs'].mean()))
+df['Age'] = df['Age'].fillna((df['Age'].median()))
+
+ls = []
+for i in range(len(df["MainBranch"])):
+  if df["MainBranch"][i] == 1:
+    ls.append(i)
+len(ls)
+for i in range(len(df["ConvertedComp"])):
+  if i in ls:
+    df["ConvertedComp"][i] = 0
+    
+df["ConvertedComp"] = df["ConvertedComp"].fillna(value = df["ConvertedComp"].mean())
+
+'''Normalizing the data''' 
+
+from sklearn import preprocessing
+
+# Create a minimum and maximum processor object
+min_max_scaler = preprocessing.MinMaxScaler( feature_range= (0,1))
+
+# Create an object to transform the data to fit minmax processor
+x_scaled = min_max_scaler.fit_transform(df.drop(axis = 1, columns= "ConvertedComp"))3
+# Run the normalizer on the dataframe
+df_normalized = pd.DataFrame(x_scaled)
