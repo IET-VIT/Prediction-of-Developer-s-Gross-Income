@@ -19,6 +19,13 @@ Extract data from https://insights.stackoverflow.com/survey
   - ✔ 9. Treated YearCode data and removed some more features
   - ✔ 10. Compensation data cleaned
   - ✔ 11. Method of treating multi-class data decided
+- [x] 30 Aug 2020
+  - ✔ 12. Treated multi-class categorical data 
+  - ✔ 13. Impute data with mean of attribute
+  - ✔ 14. Normalized data
+  - ✔ 15. Checked Correlation 
+  - ✔ 16. Improvement needed
+  
 # Creating Pipeline
 **TO DO** :
 - [ ] Web Dev Part
@@ -47,7 +54,7 @@ Extract data from https://insights.stackoverflow.com/survey
     1. Deploying the model using Flask
     2. Creating real time data analysis 
     3. Using API
-- [ ] Data Science Part
+- [x] Data Science Part
     1. Imputing the data according to what data we need (for eg. ,If student doesn't have compensation it's assigned NA, but is a important data)
     2. Eliminating the non-useful parameters, (manual or using correlation)
     3. Creating Categories
