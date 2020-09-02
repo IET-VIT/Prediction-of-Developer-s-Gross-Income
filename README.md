@@ -27,7 +27,11 @@ Extract data from https://insights.stackoverflow.com/survey
   - ✔ 16. Improvement needed
 - [x] 31 Aug 2020
   - ✔ 17. Working on correlation 
-  
+- [x] 1 Sept 2020
+  - ✔ 18. Landing page added 
+  - ✔ 19. Predict Page added
+  - ✔ 20. Columns analysis
+  - ✔ 21. Analysed each country's data and corresponding correlation
 # Creating Pipeline
 **TO DO** :
 - [ ] Web Dev Part
