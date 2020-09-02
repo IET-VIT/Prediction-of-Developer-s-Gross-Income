@@ -32,6 +32,10 @@ Extract data from https://insights.stackoverflow.com/survey
   - ✔ 19. Predict Page added
   - ✔ 20. Columns analysis
   - ✔ 21. Analysed each country's data and corresponding correlation
+- [x] 2 Sept 2020
+  - ✔ 22. Exploratory Data Analysis
+  - ✔ 23. Grouping data according to Country
+  
 # Creating Pipeline
 **TO DO** :
 - [ ] Web Dev Part
