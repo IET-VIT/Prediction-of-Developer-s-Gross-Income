@@ -35,11 +35,13 @@ Extract data from https://insights.stackoverflow.com/survey
 - [x] 2 Sept 2020
   - ✔ 22. Exploratory Data Analysis
   - ✔ 23. Grouping data according to Country
-  
+- [x] 23 Sept 2020
+  - ✔ 24. Model Created 
+  - ✔ 25. Flask app in work 
 # Creating Pipeline
 **TO DO** :
 - [ ] Web Dev Part
-  - [ ] _Basic_ (**Templates, and Technology to be used**)
+  - [x] _Basic_ (**Templates, and Technology to be used**)
     1. Front-end (<code> HTML </code>)
     2. Front-end (<code> CSS </code>)
     3. Front-end (<code> JS  </code>)
@@ -51,13 +53,13 @@ Extract data from https://insights.stackoverflow.com/survey
     2. Forms Page (Inputting the data)
     3. Result and data analysis (Predicted results, and real time analysis of data)
     
-- [ ] Data Science Part
-  - [ ] _Basic_ (**Model, and Technology/Algorithms to be used**)
+- [x] Data Science Part
+  - [x] _Basic_ (**Model, and Technology/Algorithms to be used**)
     1. Python (<code>IDE to be used Spyder/Pycharm </code>)
     2. Regression 
     3. Decision Tree Regressor 
     4. Random Forest Regressor
-    5. To be discussed
+    5. ANN Regression
     
 # Challenges anticipated
 - [ ] Web Dev Part
