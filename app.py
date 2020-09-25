@@ -2,7 +2,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+loaded_NN_model = tf.keras.models.load_model('final_NN_model1.h5')
 @app.route('/')
 def home():
     return render_template('index.html')
